@@ -22,7 +22,7 @@ export default async function handler(req, res) {
 
 		try {
 			client = await MongoClient.connect(
-				`mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@cluster0.9f6zh.mongodb.net/blg-contact?retryWrites=true&w=majority`
+				`mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_CLUSTER}.9f6zh.mongodb.net/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`
 			);
 		} catch (error) {
 			res.status(500).json({ message: 'Could not connect to database!' });
