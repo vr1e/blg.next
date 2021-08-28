@@ -1,5 +1,12 @@
 ## Nxt Blg
 
+create local `.env.local` file with mongodb creadentials:
+
+```
+MONGODB_USER=
+MONGODB_PASSWORD=
+```
+
 First, run the development server:
 
 ```bash
